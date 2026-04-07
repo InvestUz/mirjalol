@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Toy &mdash; M & SH</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Wedding invitation" />
+		<meta name="keywords" content="wedding, invitation, romantic" />
+		<meta name="author" content="FREEHTML5.CO" />
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/icomoon.css">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/magnific-popup.css">
+		<link rel="stylesheet" href="css/owl.carousel.min.css">
+		<link rel="stylesheet" href="css/owl.theme.default.min.css">
+		<link rel="stylesheet" href="css/style.css">
+
+		<script src="js/modernizr-2.6.2.min.js"></script>
+		<!--[if lt IE 9]>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+
+		<style>
+			#fh5co-header {
+				position: relative;
+				overflow: hidden;
+			}
+			#fh5co-header::before {
+				content: "";
+				position: absolute;
+				inset: 0;
+				background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.65));
+				z-index: 2;
+			}
+			#fh5co-hero-carousel {
+				position: absolute;
+				inset: 0;
+				z-index: 1;
+			}
+			#fh5co-hero-carousel,
+			#fh5co-hero-carousel .carousel-inner,
+			#fh5co-hero-carousel .item {
+				height: 100%;
+				min-height: 100vh;
+			}
+			#fh5co-hero-carousel .item {
+				background-size: cover;
+				background-position: center;
+			}
+			#fh5co-hero-carousel .carousel-indicators {
+				z-index: 3;
+				bottom: 30px;
+			}
+			#fh5co-hero-carousel .carousel-indicators li {
+				width: 12px;
+				height: 12px;
+				margin: 4px;
+				border: 2px solid #fff;
+				background: transparent;
+				opacity: 0.8;
+			}
+			#fh5co-hero-carousel .carousel-indicators .active {
+				background: #fff;
+				opacity: 1;
+			}
+			#fh5co-hero-carousel .carousel-control {
+				z-index: 3;
+				background: transparent;
+				width: 10%;
+			}
+			#fh5co-header .container {
+				position: relative;
+				z-index: 4;
+			}
+			#fh5co-header .display-tc {
+				padding: 40px 20px;
+				background: rgba(255, 255, 255, 0.08);
+				border-radius: 18px;
+				backdrop-filter: blur(2px);
+				box-shadow: 0 12px 36px rgba(0,0,0,0.25);
+			}
+			#fh5co-header .display-tc h1 {
+				font-family: 'Sacramento', cursive;
+				font-size: 78px;
+				letter-spacing: 1px;
+				text-shadow: 0 8px 24px rgba(0,0,0,0.45);
+				margin-bottom: 10px;
+			}
+			#fh5co-header .display-tc h2 {
+				font-family: 'Work Sans', sans-serif;
+				font-size: 20px;
+				letter-spacing: 2px;
+				text-transform: uppercase;
+				color: rgba(255,255,255,0.9);
+				margin-bottom: 24px;
+			}
+			.play-btn {
+				position: relative;
+				width: 86px;
+				height: 76px;
+				padding: 0;
+				border: none;
+				background: #ff3b7d;
+				color: #fff;
+				cursor: pointer;
+				transform: rotate(-45deg);
+				box-shadow: 0 12px 28px rgba(255, 47, 111, 0.45);
+				animation: pulse 1.8s infinite;
+				margin-top: 12px;
+			}
+			.play-btn::before,
+			.play-btn::after {
+				content: "";
+				position: absolute;
+				width: 86px;
+				height: 76px;
+				background: #ff3b7d;
+				border-radius: 50%;
+			}
+			.play-btn::before {
+				top: -43px;
+				left: 0;
+			}
+			.play-btn::after {
+				top: 0;
+				left: 43px;
+			}
+			.play-btn span {
+				position: absolute;
+				inset: 0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				transform: rotate(45deg);
+				font-size: 0.6rem;
+				font-weight: 700;
+				letter-spacing: 1px;
+				text-transform: uppercase;
+				line-height: 1.15;
+				text-align: center;
+			}
+			@keyframes pulse {
+				0% { transform: scale(1); box-shadow: 0 0 20px rgba(255, 71, 87, 0.6); }
+				50% { transform: scale(1.05); box-shadow: 0 0 40px rgba(255, 71, 87, 0.8); }
+				100% { transform: scale(1); box-shadow: 0 0 20px rgba(255, 71, 87, 0.6); }
+			}
+			.play-btn.active {
+				background: #ff6fa1;
+				box-shadow: 0 12px 28px rgba(255, 111, 161, 0.5);
+				animation: none;
+			}
+			.play-btn.active::before,
+			.play-btn.active::after {
+				background: #ff6fa1;
+			}
+			.play-btn:hover {
+				transform: rotate(-45deg) translateY(-2px) scale(1.03);
+			}
+			.romantic-bg {
+				background: radial-gradient(1200px 500px at 10% 0%, rgba(255, 182, 193, 0.45), transparent 60%),
+						linear-gradient(135deg, #fff0f5 0%, #ffd4e4 40%, #ffbfd7 100%);
+			}
+			.romantic-bg .fh5co-heading span,
+			.romantic-bg .fh5co-heading h2,
+			.romantic-bg .event-wrap h3,
+			.romantic-bg .event-wrap p,
+			.romantic-bg .event-col span {
+				color: #4a1f2c;
+			}
+			.romantic-bg .event-wrap {
+				background: rgba(255, 255, 255, 0.94);
+				border-radius: 18px;
+				box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+				padding: 24px 20px;
+			}
+			#fh5co-counter .feature-center {
+				background: rgba(255, 255, 255, 0.96);
+				border-radius: 18px;
+				padding: 24px 20px;
+				box-shadow: 0 14px 32px rgba(0,0,0,0.12);
+				transition: transform 0.2s ease, box-shadow 0.2s ease;
+			}
+			#fh5co-counter .feature-center:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 18px 36px rgba(0,0,0,0.18);
+			}
+			#fh5co-counter .feature-center .icon,
+			#fh5co-counter .feature-center .icon i {
+				color: #ff5c8a;
+			}
+			#fh5co-counter .counter-label {
+				font-weight: 600;
+				color: #3d3d3d;
+			}
+			#fh5co-counter a {
+				color: #ff5c8a;
+				font-weight: 600;
+			}
+			@media (max-width: 768px) {
+				#fh5co-hero-carousel,
+				#fh5co-hero-carousel .carousel-inner,
+				#fh5co-hero-carousel .item {
+					min-height: 70vh;
+				}
+				#fh5co-hero-carousel .carousel-control {
+					width: 14%;
+				}
+				.play-btn {
+					width: 74px;
+					height: 66px;
+				}
+				.play-btn::before,
+				.play-btn::after {
+					width: 74px;
+					height: 66px;
+				}
+				.play-btn::before {
+					top: -37px;
+					left: 0;
+				}
+				.play-btn::after {
+					left: 37px;
+					top: 0;
+				}
+				#fh5co-header .display-tc h1 {
+					font-size: 48px;
+				}
+				#fh5co-header .display-tc h2 {
+					font-size: 14px;
+					letter-spacing: 1px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="fh5co-loader"></div>
+		<div id="page">
+			<nav class="fh5co-nav" role="navigation">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-2">
+							<div id="fh5co-logo"><a href="index.html">Wedding<strong>.</strong></a></div>
+						</div>
+						<div class="col-xs-10 text-right menu-1">
+							<ul>
+								<li class="active"><a href="index.html">Bosh Sahifa</a></li>
+								<li><a href="#fh5co-event">Biz haqimizda</a></li>
+								<li><a href="#fh5co-counter">Yo'l haritasi</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+
+			<header id="fh5co-header" class="fh5co-cover" role="banner" data-stellar-background-ratio="0.5">
+				<div id="fh5co-hero-carousel" class="carousel slide fh5co-hero-carousel" data-ride="carousel" data-interval="4500" data-pause="false">
+					<ol class="carousel-indicators">
+						<li data-target="#fh5co-hero-carousel" data-slide-to="0" class="active"></li>
+						<li data-target="#fh5co-hero-carousel" data-slide-to="1"></li>
+						<li data-target="#fh5co-hero-carousel" data-slide-to="2"></li>
+					</ol>
+					<div class="carousel-inner" role="listbox">
+						<div class="item active" style="background-image:url(images/mirjalol-1.jpg);"></div>
+						<div class="item" style="background-image:url(images/mirjalol-2.jpg);"></div>
+						<div class="item" style="background-image:url(images/mirjalol-3.jpg);"></div>
+					</div>
+					<a class="left carousel-control" href="#fh5co-hero-carousel" role="button" data-slide="prev" aria-label="Previous slide">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					</a>
+					<a class="right carousel-control" href="#fh5co-hero-carousel" role="button" data-slide="next" aria-label="Next slide">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					</a>
+				</div>
+
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 text-center">
+							<div class="display-t">
+								<div class="display-tc animate-box" data-animate-effect="fadeIn">
+									<h1>Mirjalol &amp; Shaxlo</h1>
+									<h2>To'yimizga taklif qilamiz</h2>
+									<!-- <button class="play-btn" id="playButton" aria-label="Play music"><span>PLAY<br>MUSIC</span></button> -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+
+
+			<section id="fh5co-counter" class="fh5co-bg fh5co-counter animated romantic-bg">
+				<div class="container">
+					<div class="row">
+						<div class="display-t">
+							<div class="display-tc">
+								<div class="col-md-6 col-sm-6 col-xs-12 animate-box">
+									<div class="feature-center">
+										<span class="icon">
+											<a href="https://maps.apple.com/place?coordinate=41.403035,69.265758&name=%D0%9D%D0%B5%D0%B8%D0%B7%D0%B2%D0%B5%D1%81%D1%82%D0%BD%D0%B0%D1%8F%20%D0%B3%D0%B5%D0%BE%D0%BF%D0%BE%D0%B7%D0%B8%D1%86%D0%B8%D1%8F&map=h" target="_blank">
+												<i class="fa-solid fa-house"></i>
+											</a>
+										</span>
+										<span class="counter-label">Shaxlo uyi (Kelin uyi)</span> <br>
+										<span class="counter-label">Vaqt: 13:00 - 14:40</span> <br>
+										<a href="https://maps.apple.com/place?coordinate=41.403035,69.265758&name=%D0%9D%D0%B5%D0%B8%D0%B7%D0%B2%D0%B5%D1%81%D1%82%D0%BD%D0%B0%D1%8F%20%D0%B3%D0%B5%D0%BE%D0%BF%D0%BE%D0%B7%D0%B8%D1%86%D0%B8%D1%8F&map=h" target="_blank">Xaritada ko'rish</a>
+									</div>
+								</div>
+								<div class="col-md-6 col-sm-6 col-xs-12 animate-box">
+									<div class="feature-center">
+										<span class="icon">
+											<a href="#!" target="_blank">
+												<i class="fa-solid fa-heart"></i>
+											</a>
+										</span>
+										<span class="counter-label">Nikoh marosimi (To'y manzili)</span> <br>
+										<span class="counter-label">To'y kuni: 08.04.2026</span> <br>
+										<span class="counter-label">Vaqt: 18:00</span> <br>
+										<!-- <a href="https://maps.google.com/maps?q=41.373540,69.321716&ll=41.373540,69.321716&z=16">Xaritada ko'rish</a> -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<audio id="bgMusic" loop>
+			<source src="audio07142245.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+		</audio>
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.easing.1.3.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.waypoints.min.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/jquery.countTo.js"></script>
+		<script src="js/jquery.stellar.min.js"></script>
+		<script src="js/jquery.magnific-popup.min.js"></script>
+		<script src="js/magnific-popup-options.js"></script>
+		<script src="js/main.js"></script>
+		<script>
+			const btn = document.getElementById('playButton');
+			const btnLabel = btn.querySelector('span');
+			const audio = document.getElementById('bgMusic');
+			let isPlaying = false;
+
+			const setBtnLabel = (text) => {
+				if (btnLabel) btnLabel.textContent = text;
+			};
+
+			const startAudio = async () => {
+				if (isPlaying) return;
+				try {
+					await audio.play();
+					btn.classList.add('active');
+					setBtnLabel('PAUSE');
+					isPlaying = true;
+				} catch (err) {
+					console.error('Autoplay blocked:', err);
+				}
+			};
+
+			window.addEventListener('scroll', startAudio, { once: true });
+			window.addEventListener('click', startAudio, { once: true });
+
+			btn.addEventListener('click', async () => {
+				try {
+					if (!isPlaying) {
+						await audio.play();
+						btn.classList.add('active');
+						setBtnLabel('PAUSE');
+					} else {
+						audio.pause();
+						btn.classList.remove('active');
+						setBtnLabel('PLAY');
+					}
+					isPlaying = !isPlaying;
+				} catch (err) {
+					console.error('Playback failed:', err);
+				}
+			});
+		</script>
+	</body>
+</html>
+
